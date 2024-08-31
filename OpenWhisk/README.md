@@ -138,3 +138,11 @@ Si possono utilizzare per velocizzare il procedimento i due script forniti:
     - nome da assegnare al **trigger**;
     - nome da assegnare alla **rule**;
     - nome dell'**action** da associare al **trigger** creato tramite la **rule**.
+
+### Utilizzo **Action** fornite
+
+Se si vuole utilizzare un'**action** di quelle messe a disposizione basta effettuare il suo `deploy`. Quindi consideriamo per esempio l'action **python** fornita, è sufficiente eseguire il seguente comando:
+
+- `wskdeploy -m <path-to-file>/python-action.yaml`
+
+Oppure eseguire lo script `script_deploy.sh` presente nella cartella di ogni **action**.

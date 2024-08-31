@@ -1,0 +1,5 @@
+packages:
+    default:
+        actions:
+            node-action:
+                function: main.js

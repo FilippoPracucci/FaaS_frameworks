@@ -1,0 +1,5 @@
+packages:
+    default:
+        actions:
+            python-action:
+                function: main.py

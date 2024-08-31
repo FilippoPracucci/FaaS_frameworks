@@ -1,0 +1,5 @@
+{
+    "name": "file.json",
+    "type": "json",
+    "goal": "File to pass to a function."
+}

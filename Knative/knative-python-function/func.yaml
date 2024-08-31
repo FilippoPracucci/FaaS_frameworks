@@ -1,0 +1,7 @@
+specVersion: 0.36.0
+name: knative-python-function
+runtime: python
+namespace: default
+created: 2024-08-01T10:38:23.639416685+02:00
+build:
+  builder: pack

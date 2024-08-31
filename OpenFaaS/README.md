@@ -90,3 +90,13 @@ L'esecuzione dello script richiede il passaggio di due argomenti:
 
 - nome da assegnare alla funzione;
 - linguaggio che si sfrutterà per la funzione.
+
+### Utilizzo funzioni fornite
+
+Per utilizzare una funzione tra quelle fornite è sufficiente effettuare la `build` e poi il `deploy`. Quindi se consideriamo per esempio la funzione **python**:
+
+- accertarsi di aver fatto il `port forwarding` per rendere l'indirizzo raggiungibile;
+- eseguire il comando: `faas-cli build -f python-function.yml`;
+- eseguire il comando: `faas-cli deploy -f python-function.yml`
+
+Oppure si può usare lo script `script_deploy.sh` presente nella cartella di ogni funzione (dopo aver provveduto a `port-forwarding`).

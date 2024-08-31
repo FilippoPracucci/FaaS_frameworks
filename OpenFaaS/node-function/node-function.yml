@@ -1,0 +1,8 @@
+version: 1.0
+provider:
+  name: openfaas
+functions:
+  node-function:
+    lang: node20
+    handler: ./node-function
+    image: filopracu/node-function:0.1.0

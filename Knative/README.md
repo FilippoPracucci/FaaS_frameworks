@@ -98,3 +98,11 @@ La creazione di una funzione ed il relativo `deploy` possono essere realizzati t
 - **nome** da assegnare alla funzione;
 - **linguaggio** che si userà per la funzione;
 - **image registry** per il `deploy`.
+
+### Utilizzo funzioni fornite
+
+Se si vuole usare una delle funzioni presenti, basta effettuare la `build` e il `deploy`; per quest'ultimo è necessario anche fornire un **image registry** (es. **Docker Hub**). Il tutto può essere racchiuso in un unico comando, da eseguire all'interno della cartella della funzione. Se per esempio vogliamo usare la funzione **python**, dall'interno della cartella `knative-python-function` si esegue il comando:
+
+`func deploy --build --registry <registry>`.
+
+Oppure utilizzare lo script `script_deploy.sh` presente all'interno della cartella di ogni funzione; questo richiede il passaggio di un argomento, ovvero l'**image registry**.

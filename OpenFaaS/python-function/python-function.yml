@@ -1,0 +1,9 @@
+version: 1.0
+provider:
+  name: openfaas
+functions:
+  python-function:
+    lang: python3-http
+    handler: ./python-function
+    image: filopracu/python-function:0.1.0
+

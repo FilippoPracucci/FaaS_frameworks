@@ -1,0 +1,7 @@
+specVersion: 0.36.0
+name: knative-node-function
+runtime: node
+namespace: default
+created: 2024-08-17T16:41:34.158519989+02:00
+build:
+  builder: pack
