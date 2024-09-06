@@ -1,0 +1,7 @@
+packages:
+  default:
+    actions:
+      java-action:
+        function: build/libs/java-action.jar
+        runtime: java
+        main: main.java.JavaAction

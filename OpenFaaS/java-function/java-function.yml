@@ -1,0 +1,8 @@
+version: 1.0
+provider:
+  name: openfaas
+functions:
+  java-function:
+    lang: java11
+    handler: ./java-function
+    image: filopracu/java-function:0.1.0
