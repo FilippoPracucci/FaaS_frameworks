@@ -1,7 +1,6 @@
 specVersion: 0.36.0
 name: knative-java-function
 runtime: springboot
-registry: docker.io/filopracu
 namespace: default
 created: 2024-09-05T10:19:22.033936105+02:00
 build:
@@ -13,6 +12,3 @@ build:
     value: "21"
   - name: BP_MAVEN_ACTIVE_PROFILES
     value: native
-deploy:
-  namespace: default
-  image: index.docker.io/filopracu/knative-java-function@sha256:21f79f60c459d9f3e10b749b0901d8eef65db7dc28496e54582ed4614cea43b8
