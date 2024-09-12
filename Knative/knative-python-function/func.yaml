@@ -3,5 +3,9 @@ name: knative-python-function
 runtime: python
 namespace: default
 created: 2024-08-01T10:38:23.639416685+02:00
+options:
+  scale:
+    metric: rps
+    target: 100
 build:
   builder: pack

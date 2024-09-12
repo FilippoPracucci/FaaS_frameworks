@@ -3,6 +3,10 @@ name: knative-java-function
 runtime: springboot
 namespace: default
 created: 2024-09-05T10:19:22.033936105+02:00
+options:
+  scale:
+    metric: rps
+    target: 100
 build:
   builder: pack
   buildEnvs:
