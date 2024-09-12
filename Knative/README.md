@@ -59,6 +59,20 @@ Dunque si esegue il comando `kn quickstart kind`.
     $ mv func /usr/local/bin
     ```
 
+### Configurazione funzionalità `scale-to-zero`
+
+Si utilizza il seguente comando per disabilitare la scalabilità a zero dei container:
+```
+kubectl edit configmap config-autoscaler -n knative-serving
+```
+A questo punto si aggiunge in fondo al file la seguente opzione:
+```
+data:
+  enable-scale-to-zero: "false"
+```
+
+Questo viene fatto per uniformare **Knative** al comportamento di **OpenFaaS**, il quale in versione CE non consente la scalabilità a zero, ma non è obbligatorio.
+
 ## Gestione funzione
 
 ### Creazione funzione
@@ -66,6 +80,16 @@ Dunque si esegue il comando `kn quickstart kind`.
 Il framework mette a disposizione diversi linguaggi per la creazione di funzioni; una volta scelto è possibile creare una funzione come segue:
 ```
 func create -l <language> <function-name>
+```
+
+### Configurazione dell'autoscaling
+
+Questa sezione è opzionale e può essere cambiata in base alle necessità e alle scelte prese. In questo caso l'obiettivo è uniformarsi a **OpenFaaS** nella gestione dell'autoscaling tramite il numero di **richieste per secondo**, quindi si aggiunge la seguente porzione al file `.yaml` della funzione:
+```
+options:
+  scale:
+    metric: rps
+    target: 100
 ```
 
 ### Build, deploy e run della funzione

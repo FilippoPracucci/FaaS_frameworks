@@ -16,5 +16,10 @@ else
     cd $FUNC_NAME
     docker login
 
+    echo "options:
+  scale:
+    metric: rps
+    target: 100" >> func.yaml
+
     func deploy --registry $REGISTRY --build
 fi
