@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: main.java.JavaAction
-Implementation-Title: OpenWhisk Action
-Implementation-Version: 1.0
-
